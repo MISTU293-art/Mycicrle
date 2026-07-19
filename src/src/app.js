@@ -2,7 +2,6 @@ import dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
-import cookieParser from 'cookie-parser';
 import connectionDB from "../src/config/db.js";
 const app = express();
 
@@ -14,7 +13,7 @@ app.use(
   }),
 );
 app.use(morgan("dev"));
-app.use(cookieParser());
+
 import rateLimit from "express-rate-limit";
 
 const limiter = rateLimit({
@@ -34,7 +33,5 @@ app.get("/", (req, res) => {
   res.send("hi");
 });
 import userRoute from "../src/routes/auth.routes.js";
-import postRouter from "../src/routes/post.routes.js"
 app.use("/api/v1/auth", userRoute);
-app.use("/api/v1/posts",postRouter)
 export default app;

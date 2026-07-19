@@ -1,0 +1,36 @@
+{
+  "name": "mycircle",
+  "version": "1.0.0",
+  "description": "a social media platform backend",
+  "keywords": [
+    "instagram",
+    "mycircel"
+  ],
+  "homepage": "https://github.com/MISTU293-art/Mycicrle#readme",
+  "bugs": {
+    "url": "https://github.com/MISTU293-art/Mycicrle/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MISTU293-art/Mycicrle.git"
+  },
+  "license": "ISC",
+  "author": "mistu",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@imagekit/nodejs": "^7.10.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.6.0",
+    "mongoose": "^9.7.4",
+    "morgan": "^1.11.0",
+    "multer": "^2.2.0",
+    "nodemon": "^3.1.14"
+  }
+}
