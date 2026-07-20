@@ -36,17 +36,17 @@ export  async function postCreate(req, res) {
 }
 
 
-export  async function getPost(req, res) {
-    try { 
-      const posts=  await postModel.find();
+export async function getPost(req, res) {
+    try {
+        const posts = await postModel.find().sort({ createdAt: -1 });
+
         return res.status(200).json({
-            message:"Posts fetched Sucessfully",
+            message: "Posts fetched successfully",
             posts
-        })
-    }
-    catch (error) {
+        });
+    } catch (error) {
         return res.status(500).json({
-            message:"Currently We are Facing An Error."
-        })
+            message: "Currently we are facing an error."
+        });
     }
 }

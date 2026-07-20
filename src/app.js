@@ -19,7 +19,7 @@ import rateLimit from "express-rate-limit";
 
 const limiter = rateLimit({
   windowMs: 10 * 1000, // 1 minutes
-  max: 3, // Max 3 requests per IP
+  max: 100, // Max 3 requests per IP
   message: "Too many requests, try again later.",
 });
 
@@ -33,8 +33,8 @@ connectionDB();
 app.get("/", (req, res) => {
   res.send("hi");
 });
-import userRoute from "../src/routes/auth.routes.js";
-import postRouter from "../src/routes/post.routes.js"
+import userRoute from "./routes/auth.routes.js";
+import postRouter from "./routes/post.routes.js"
 app.use("/api/v1/auth", userRoute);
 app.use("/api/v1/posts",postRouter)
 export default app;
